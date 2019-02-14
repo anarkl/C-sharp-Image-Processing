@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58EEF918-0E01-45DA-A3EB-C1DEE3A7C80A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ImageProcessing</RootNamespace>
+    <AssemblyName>ImageProcessing</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Binary.cs" />
+    <Compile Include="frm_ColorModif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ColorModif.Designer.cs">
+      <DependentUpon>frm_ColorModif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_dstImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_dstImg.Designer.cs">
+      <DependentUpon>frm_dstImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_EdgeDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_EdgeDetection.Designer.cs">
+      <DependentUpon>frm_EdgeDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Filtering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Filtering.Designer.cs">
+      <DependentUpon>frm_Filtering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HistogramModif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HistogramModif.Designer.cs">
+      <DependentUpon>frm_HistogramModif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Morphology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Morphology.Designer.cs">
+      <DependentUpon>frm_Morphology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_orgImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_orgImg.Designer.cs">
+      <DependentUpon>frm_orgImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Threshold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Threshold.Designer.cs">
+      <DependentUpon>frm_Threshold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gaussian.cs" />
+    <Compile Include="Globl.cs" />
+    <Compile Include="Morphology.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_ColorModif.resx">
+      <DependentUpon>frm_ColorModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_dstImg.resx">
+      <DependentUpon>frm_dstImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_EdgeDetection.resx">
+      <DependentUpon>frm_EdgeDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Filtering.resx">
+      <DependentUpon>frm_Filtering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HistogramModif.resx">
+      <DependentUpon>frm_HistogramModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Morphology.resx">
+      <DependentUpon>frm_Morphology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_orgImg.resx">
+      <DependentUpon>frm_orgImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Threshold.resx">
+      <DependentUpon>frm_Threshold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
